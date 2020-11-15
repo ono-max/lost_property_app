@@ -1,0 +1,7 @@
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.gmap %>&callback=initMap&libraries=&v=weekly"
+  defer>
+</script>
