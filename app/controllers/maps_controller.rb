@@ -3,10 +3,7 @@ class MapsController < ApplicationController
     @items = Item.all
     gon.items = @items
   end
-
-  def show
-  end
-
+  
   def new
     @@latitude = params[:latitude]
     @@longitude = params[:longitude]
