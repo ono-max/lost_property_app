@@ -8,7 +8,6 @@ function initMap() {
   });
   const card = document.getElementById("pac-card");
   const input = document.getElementById("pac-input");
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
   const autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.bindTo("bounds", map);
   autocomplete.setFields(["address_components", "geometry", "icon", "name"]);

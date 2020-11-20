@@ -1,10 +1,6 @@
-<div class="pac-card" id="pac-card">
-  <div>
-    <div id="title">Autocomplete search</div>
-    <div id="pac-container">
-      <input id="pac-input" type="text" placeholder="Enter a location" />
-    </div>
-  </div>
+
+<div id="pac-container">
+  <input id="pac-input" type="text" placeholder="Enter a location" />
 </div>
 <div id="map-new"></div>
 <%= form_with model: @item, url: maps_path, class: 'form', local: true  do |form| %>
@@ -18,7 +14,7 @@
   <span id="place-address"></span>
 </div>
 <div class = "explain">
-  ①右上の検索窓から見つけた地点を入力する<br>
+  ①上の検索窓から見つけた地点を入力する<br>
   ②「choose file」をタップして落とし物の写真を添付する<br>
   ③送信を押して登録完了！
 </div>
