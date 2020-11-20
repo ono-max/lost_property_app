@@ -51,7 +51,7 @@
 # ------------------------------------
 server "54.249.199.204",
   user: "neo",
-  roles: %w{app db web},
+  roles: %w{app db web}
 #   ssh_options: {
 #     user: "user_name", # overrides user setting above
 #     keys: %w(/home/user_name/.ssh/id_rsa),
