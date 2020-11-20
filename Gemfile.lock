@@ -52,6 +52,7 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (10.0.2.0)
       execjs
+    bcrypt_pbkdf (1.0.1)
     bindex (0.8.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
@@ -91,6 +92,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -242,6 +244,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_link_to
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap (>= 1.1.0)
   bootstrap
   byebug
@@ -251,6 +254,7 @@ DEPENDENCIES
   capistrano-rbenv
   carrierwave
   coffee-rails (~> 4.2)
+  ed25519 (>= 1.2, < 2.0)
   gon
   jbuilder (~> 2.5)
   jquery-rails

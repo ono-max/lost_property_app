@@ -36,6 +36,8 @@ gem 'jquery-rails'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'gon'
+gem 'ed25519', '>= 1.2', '< 2.0'
+gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
