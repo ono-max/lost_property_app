@@ -1,4 +1,12 @@
 class ImageUploader < CarrierWave::Uploader::Base
+  if Rails.env.development?
+    storage :file
+  elsif Rails.env.test?
+    storage :file
+  else
+    storage :fog
+  end
+
   #リサイズ、画像形式を変更に必要
   include CarrierWave::RMagick
 
@@ -36,7 +44,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
