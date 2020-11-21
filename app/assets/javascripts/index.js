@@ -8,12 +8,11 @@ window.onload = function initMap() {
   for (let index = 0; index < gon.items.length; index++){
     const latitude = gon.items[index].latitude;
     const longitude = gon.items[index].longitude;
-    const url = gon.items[index].image;
+    const url = gon.items[index].image.url;
     var location = { lat: latitude, lng: longitude };
     const is_same_location = cluster.some(
       past_location => past_location.lat === location.lat && past_location.lng === location.lng
     );
-    console.log(gon.items[index].image)
     // I will change this stupid code later
     if (is_same_location){
       const newLat = latitude + (Math.random() -.5) / 1500;
@@ -23,9 +22,9 @@ window.onload = function initMap() {
     const contentString = 
       '<div id="content">' +
       '<div id="image-box">' +
-      '<img alt="sample" src=' +
+      '<img alt="sample" src="' +
       url +
-      '/>' +
+      '" />' +
       "</div>" +
       "</div>";
     const infowindow = new google.maps.InfoWindow({
