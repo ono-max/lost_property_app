@@ -8,6 +8,8 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory = 'lost-property-app'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/lost-property-app'
+    config.fog_provider = 'fog/aws'
     config.cache_storage = :fog
   end
 end
