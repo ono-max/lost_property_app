@@ -5,8 +5,6 @@ class MapsController < ApplicationController
   end
   
   def new
-    @@latitude = params[:latitude]
-    @@longitude = params[:longitude]
     @item = Item.new
   end
 
@@ -23,6 +21,6 @@ class MapsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:image).merge(latitude: @@latitude).merge(longitude: @@longitude)
+    params.require(:item).permit(:image, :latitude, :longitude)
   end
 end

@@ -6,6 +6,8 @@
 <%= form_with model: @item, url: maps_path, class: 'form', local: true  do |form| %>
   <%= form.label :image, '写真をアップロード' %>
   <%= form.file_field :image %>
+  <%= form.hidden_field :latitude, :value => :latitude %>
+  <%= form.hidden_field :longitude, :value => :longitude %>
   <%= form.submit "送信", id: "submit_button" %>
 <% end %>
 <div id="infowindow-content">

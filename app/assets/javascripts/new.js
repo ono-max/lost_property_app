@@ -37,19 +37,8 @@ function initMap() {
     }
     marker.setPosition(place.geometry.location);
     marker.setVisible(true);
-    // Set the value
-    $.ajax({
-      type: "GET",
-      url: "/maps/new",
-      data: {
-              latitude: place.geometry.location.lat(),
-              longitude: place.geometry.location.lng()
-            },
-      dataType: 'html',
-      error: function(data) {
-          alert("エラーが発生しました。お手数ですが、もう一度検索してください。");
-      }
-    })
+    document.getElementById("item_latitude").value = place.geometry.location.lat()
+    document.getElementById("item_longitude").value = place.geometry.location.lng()
     let address = "";
     if (place.address_components) {
       address = [
