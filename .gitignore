@@ -74,3 +74,6 @@ yarn-debug.log*
 public/uploads
 
 # End of https://www.toptal.com/developers/gitignore/api/rails
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
